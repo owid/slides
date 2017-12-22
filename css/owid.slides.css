@@ -1,0 +1,709 @@
+/* Reveal theme stuff */
+
+
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+body {
+    background: #fff;
+    background-color: #fff;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    color: #000;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+    line-height: 1.3;
+    font-weight: inherit;
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0 0 20px 0;
+    font-family: "News Cycle", Impact, sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
+    word-wrap: break-word;
+}
+
+.reveal h1 {
+    text-shadow: none;
+}
+
+
+/*********************************************
+ * OTHER
+ *********************************************/
+
+.reveal p {
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+
+/* Ensure certain elements are never larger than the slide itself */
+
+
+/*.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }*/
+
+.reveal strong,
+.reveal b {
+    font-weight: bold;
+}
+
+.reveal em {
+    font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+
+.reveal ol {
+    list-style-type: decimal;
+}
+
+.reveal ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul {
+    list-style-type: square;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+    display: block;
+    margin-left: 40px;
+}
+
+.reveal dt {
+    font-weight: bold;
+}
+
+.reveal dd {
+    margin-left: 40px;
+}
+
+.reveal q,
+.reveal blockquote {
+    quotes: none;
+}
+
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+    display: inline-block;
+}
+
+.reveal q {
+    font-style: italic;
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal code {
+    font-family: monospace;
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+}
+
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.reveal table th {
+    font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+    text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+    text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.reveal sup {
+    vertical-align: super;
+}
+
+.reveal sub {
+    vertical-align: sub;
+}
+
+.reveal small {
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    vertical-align: top;
+}
+
+.reveal small * {
+    vertical-align: top;
+}
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.8);
+    height: 4px;
+}
+
+.reveal .progress span {
+    background: #c0023e;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+
+/* Start OWID customizations to the above theme
+ *
+ * The main purpose of these customizations is to replace
+ * the default reveal.js scaling and layout system with one
+ * which prioritizes giving visualizations as much space as
+ * possible
+*
+ * Authored by Jaiden Mispy - http://github.com/mispy
+ --------------------------------------------- */
+
+
+/* Use viewport width units to maintain consistent
+text size to screen size relationship */
+
+body {
+    font-size: 1.5vw;
+}
+
+@media (min-width: 1280px) {
+    body {
+        font-size: 1.2vw;
+    }
+}
+
+.slides h2,
+.slides h3,
+.slides h4,
+.slides h5,
+.slides h6 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.slides h1 {
+    font-size: 5em;
+    font-family: Georgia, "Times New Roman", Serif
+}
+
+.slides h2 {
+    font-size: 4em;
+}
+
+.slides h3 {
+    font-size: 3em;
+}
+
+.slides h4 {
+    font-size: 2em;
+}
+
+.slides h5 {
+  font-size: 1.5em;
+}
+
+.reveal {
+    /* Re-enable pinch-zooming */
+    touch-action: initial !important;
+    -ms-touch-action: initial !important;
+}
+
+.slides > section {
+    height: 100%;
+}
+
+html:not(.mobile) .slides > section {
+    /* Accounts for the progress bar */
+    height: calc(100% - 4px);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.slides figure img {
+    border: 1px solid #ccc;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+html.no-mobile .slides a > img:hover {
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+.slides ul {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+.slides ul li {
+  margin-bottom: 0.2em;
+}
+
+/* Links
+--------------------------------------------- */
+
+.slides a {
+    color: #c0023e;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    transition: color .15s ease;
+}
+
+.slides a:hover {
+    color: #5b011d;
+    text-shadow: none;
+    border: none;
+}
+
+.slides .roll span:after {
+    color: #fff;
+    background: #00003f;
+}
+
+
+/* Custom slide transition
+ * The default reveal.js one wasn't performant enough
+ * so we use our own transform transition on mobile
+ --------------------------------------------- */
+
+.slides {
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.reveal .slides > section {
+    width: 100vw;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    float: left;
+    position: relative;
+}
+
+.reveal .slides > section.present,
+.reveal .slides > section.future,
+.reveal .slides > section.past {
+    padding: 0;
+    display: flex !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.reveal .slides > section:not(.annotated) {
+  padding: 10vw;
+}
+
+
+html.mobile .progress {
+    display: none !important;
+}
+
+.slides p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .slides p {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+h3.interactive {
+    color: #c0023e;
+    font-size: 1.5em;
+    text-shadow: 1px;
+}
+
+
+/* Figures are combinations of img or iframe with text in a figcaption
+ * On landscape the captions go alongside, on portrait down the bottom
+ * Captions are hidden in fullscreen presenting mode (the speaker takes over)
+ --------------------------------------------- */
+
+html.landscape figure img,
+html.landscape figure iframe {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+html.landscape figure img {
+    max-width: 70vw;
+    max-height: 90vh;
+}
+
+html.landscape figure iframe {
+    width: 70vw;
+    height: 90vh;
+}
+
+html.landscape figure figcaption {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25vw;
+    padding-left: 10px;
+    text-align: left;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+    html.landscape figure figcaption {
+        width: 20vw;
+        padding-left: 20px;
+    }
+}
+
+html.portrait figure {
+    max-height: calc(100% - 80px);
+    overflow: auto;
+}
+
+html.portrait figure img {
+    max-width: 95vw;
+    max-height: 60vh;
+}
+
+html.portrait figure iframe {
+    width: 95vw;
+    height: 60vh;
+}
+
+@media (min-width: 769px) {
+  html.landscape figure img {
+    max-height: 80vh;
+    max-width: 65vw;
+  }
+
+  html.landscape figure iframe {
+    height: 80vh;
+    width: 65vw;
+  }
+}
+
+html.portrait figure figcaption {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+html.portrait figure figcaption,
+html.portrait figure figcaption p {
+    font-size: 3vw;
+}
+
+figure figcaption p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Fullscreen presenting mode: just the visualizations
+ * Sections will expand to fill the whole screen
+ --------------------------------------------- */
+
+html.fullscreen {
+    background: #fff;
+    /* for Firefox */
+}
+
+html.fullscreen figure figcaption {
+    display: none;
+}
+
+html.fullscreen figure img {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    max-width: 95vw;
+    max-height: calc(100vh - 100px);
+}
+
+h3 + figure img {
+    max-height: calc(80vh - 100px) !important;
+}
+
+html.fullscreen figure iframe {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    width: 95vw;
+    height: calc(100vh - 100px);
+}
+
+
+/* Custom presentation navigation controls
+ * Includes fullscreen toggle, back/forward, slide counter
+ --------------------------------------------- */
+
+.controls {
+    position: absolute;
+    bottom: 16px;
+    right: 10px;
+    z-index: 100;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    color: #333;
+}
+
+.controls a {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.controls a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.controls a > i {
+    vertical-align: middle;
+}
+
+html.no-mobile .controls a:hover {
+    background-color: #444;
+    color: white;
+}
+
+.progress-counter {
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: right;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+html.dark .controls {
+    color: #eee;
+}
+
+html.no-mobile.dark .controls a:hover {
+    background: #666;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        bottom: 8px;
+        right: 8px;
+    }
+    .controls a {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .progress-counter {
+        font-size: 12px;
+    }
+}
+
+html.mobile .controls a.fullscreen {
+    display: none;
+}
+
+html.fullscreen .controls a {
+    display: none;
+}
+
+
+/* Special styling for the title slide and similar dark slides
+--------------------------------------------- */
+
+#title-slide, section.dark {
+    color: rgb(255, 203, 31);
+    background-color: #001936;
+    background-image: url(../img/WorldMapDark1920x1080.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#title-slide a, section.dark a {
+    color: #FF4012;
+}
+
+#title-slide h1 {
+    cursor: pointer;
+}
+
+#title-slide h1::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    font-size: 10vw;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+
+/* Special styling for the final slide
+--------------------------------------------- */
+
+#end-slide {
+    padding: 0;
+}
+
+#end-slide h2 {
+    margin-bottom: 0.1em;
+}
+
+#end-slide h2 a {
+    font-size: 130%;
+}
+
+#end-slide ul {
+    font-size: 1.2em;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+#end-slide .separator {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+#end-slide h3 {
+    margin-bottom: 0.1em;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #end-slide h3 {
+        margin-bottom: 8px;
+    }
+    #end-slide li {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+}
