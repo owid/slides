@@ -164,21 +164,6 @@
                 else if (msg.event == 'touchend')
                     Reveal.onTouchEnd(msg);
             });         
-
-            // MISPY HACK: Prevent iframes from stealing keypresses
-            // ... but still allow typing in the grapher chosen select field
-            setInterval(function() {
-                if ($(document.activeElement).is("iframe")) {
-                    try {
-                        var $el = $($(Reveal.getCurrentSlide()).find("iframe").get(0).contentDocument.activeElement);
-                        if ($el.is(":focus") && $el.closest(".chosen-container").hasClass("chosen-with-drop"))
-                            return; // allow input to the Add Country search field
-                    } catch (e) { }
-
-                    $("iframe").blur();
-                    $(window).focus();
-                }
-            }, 500);
         }
 
         initialize();
