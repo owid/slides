@@ -118,7 +118,7 @@
                     transition = 'none';
             }*/
 
-            if (transition != 'slide') {
+            /*if (transition != 'slide') {
                 if ($slides.data('transitioning')) {
                     // MISPY: We make non-slide transitions wait for slide transitions to finish
                     // to avoid the feeling of slides jumping all over the places
@@ -134,8 +134,9 @@
                 onTransitionEnd = null;
                 $slides.css('transition', '');
                 $slides.data('transitioning', true);
-                transformElement($slides.get(0), transform);                
-            }
+            }*/
+
+            transformElement($slides.get(0), transform);                
 
             if ($(slide).hasClass('dark'))
                 $('html').addClass('dark');

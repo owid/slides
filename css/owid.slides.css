@@ -355,17 +355,6 @@ html.no-mobile .slides a > img:hover {
     background: #00003f;
 }
 
-
-/* Custom slide transition
- * The default reveal.js one wasn't performant enough
- * so we use our own transform transition on mobile
- --------------------------------------------- */
-
-.slides {
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-}
-
 .reveal .slides > section {
     width: 100vw;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
