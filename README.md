@@ -6,5 +6,6 @@ Commits to the master branch of this repo are published automatically to https:/
 
 Reminder about how Netlify maps file structure to urls:
 
-/global-health/index.html => https://slides.ourworldindata.org/global-health/
-/global-health/global-health.html => https://slides.ourworldindata.org/global-health/global-health
+```/global-health/index.html => https://slides.ourworldindata.org/global-health/```
+
+```/global-health/global-health.html => https://slides.ourworldindata.org/global-health/global-health```
