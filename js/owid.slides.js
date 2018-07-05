@@ -1,6 +1,11 @@
 (function() {
     'use strict';
 
+    // Huge hack to get around Netlify proxying behavior with trailing slashes and relative urls
+    if (!location.pathname.match(/\/$/)) {
+        location.pathname = location.pathname + "/"
+    }
+
     var owid = {};
 
     owid.slides = function() {
