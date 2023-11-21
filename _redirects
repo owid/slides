@@ -1,2 +1,24 @@
 /africa-in-data https://africaindata.org 302
-/world-poverty https://slides.ourworldindata.org/teaching_notes/ch1/poverty#/title-slide 301
+/world-poverty /teaching_notes/ch1/poverty#/title-slide 301
+
+/ https://ourworldindata.org 302
+/17-stories-sdgs https://ourworldindata.org 302
+/environmental-change https://ourworldindata.org 302
+/global-health https://ourworldindata.org 302
+/hunger-and-food-provision https://ourworldindata.org 302
+/planetary-health https://ourworldindata.org 302
+/planetary-health-summer-school https://ourworldindata.org 302
+/world-poverty-old-slides https://ourworldindata.org 302
+/war-and-violence https://ourworldindata.org 302
+/twcf2019slides https://ourworldindata.org 302
+/udla2019 https://ourworldindata.org 302
+/uniandes2019 https://ourworldindata.org 302
+
+/20* https://ourworldindata.org 302
+/bti-2021/* https://ourworldindata.org 302
+/edu/* https://ourworldindata.org 302
+/talks/2018_the_past_and_future_of_the_world_children_find_themselves_in/* https://ourworldindata.org 302
+/war-and-violence/* https://ourworldindata.org 302
+/wfp-2021/* https://ourworldindata.org 302
+
+/*/ /:splat 301
